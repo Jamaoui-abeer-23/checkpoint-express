@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "public/style")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Apply middleware to all routes
 app.use(workingHoursMiddleware);

@@ -3,7 +3,7 @@ const workingHoursMiddleware = (req, res, next) => {
 	const day = now.getDay(); // Sunday: 0, Monday: 1, ..., Saturday: 6
 	const hour = now.getHours();
 
-	if (day >= 1 && day <= 2 && hour >= 9 && hour < 17) {
+	if (day >= 1 && day <= 5 && hour >= 9 && hour < 17) {
 		next(); // Allow access
 	} else {
 		res.send(
